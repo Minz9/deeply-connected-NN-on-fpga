@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Apr 24 16:08:11 2022
+# Process ID: 27612
+# Current directory: E:/MTP2/NN-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20752 E:\MTP2\NN-FPGA\NN-FPGA.xpr
+# Log file: E:/MTP2/NN-FPGA/vivado.log
+# Journal file: E:/MTP2/NN-FPGA\vivado.jou
+# Running On: DESKTOP-0EKQBCJ, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17102 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/MTP2/NN-FPGA/NN-FPGA.xpr
+update_compile_order -fileset sources_1
+open_bd_design {E:/MTP2/NN-FPGA/NN-FPGA.srcs/sources_1/bd/myBlock/myBlock.bd}
+open_bd_design {E:/MTP2/NN-FPGA/NN-FPGA.srcs/sources_1/bd/myBlock/myBlock.bd}
+validate_bd_design -force
+open_bd_design {E:/MTP2/NN-FPGA/NN-FPGA.srcs/sources_1/bd/myBlock/myBlock.bd}
+open_bd_design {E:/MTP2/NN-FPGA/NN-FPGA.srcs/sources_1/bd/myBlock/myBlock.bd}
+save_bd_design

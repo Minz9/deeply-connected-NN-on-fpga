@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat Apr 23 01:43:30 2022
+# Process ID: 1840
+# Current directory: E:/MTP2/neuralNetwork-master/Tut-8/NN-FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14804 E:\MTP2\neuralNetwork-master\Tut-8\NN-FPGA\NN-FPGA.xpr
+# Log file: E:/MTP2/neuralNetwork-master/Tut-8/NN-FPGA/vivado.log
+# Journal file: E:/MTP2/neuralNetwork-master/Tut-8/NN-FPGA\vivado.jou
+# Running On: DESKTOP-0EKQBCJ, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 17102 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/MTP2/neuralNetwork-master/Tut-8/NN-FPGA/NN-FPGA.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source top_sim.tcl
+restart
+run all
+open_bd_design {E:/MTP2/neuralNetwork-master/Tut-8/NN-FPGA/NN-FPGA.srcs/sources_1/bd/myBlock/myBlock.bd}
+startgroup
+set_property -dict [list CONFIG.c_include_mm2s_dre {1}] [get_bd_cells axi_dma_0]
+endgroup
+make_wrapper -files [get_files E:/MTP2/neuralNetwork-master/Tut-8/NN-FPGA/NN-FPGA.srcs/sources_1/bd/myBlock/myBlock.bd] -top
+add_files -norecurse e:/MTP2/neuralNetwork-master/Tut-8/NN-FPGA/NN-FPGA.gen/sources_1/bd/myBlock/hdl/myBlock_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top myBlock_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top zyNet [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source top_sim.tcl
+run all
+close_sim

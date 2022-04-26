@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../NN-FPGA.gen/sources_1/bd/myBlock/ipshared/f0b6/hdl/verilog" --include "../../../../NN-FPGA.gen/sources_1/bd/myBlock/ipshared/66be/hdl/verilog" --include "../../../../NN-FPGA.gen/sources_1/bd/myBlock/ipshared/ec67/hdl" --include "../../../../NN-FPGA.gen/sources_1/bd/myBlock/ipshared/3007/hdl" --include "../../../../NN-FPGA.gen/sources_1/bd/myBlock/ipshared/1225/rtl" --include "E:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../../src/fpga/rtl/Layer_1.v" \
+"../../../../../src/fpga/rtl/Layer_2.v" \
+"../../../../../src/fpga/rtl/Layer_3.v" \
+"../../../../../src/fpga/rtl/Layer_4.v" \
+"../../../../../src/fpga/rtl/Sig_ROM.v" \
+"../../../../../src/fpga/rtl/Weight_Memory.v" \
+"../../../../../src/fpga/rtl/axi_lite_wrapper.v" \
+"../../../../../src/fpga/rtl/maxFinder.v" \
+"../../../../../src/fpga/rtl/neuron.v" \
+"../../../../../src/fpga/rtl/relu.v" \
+"../../../../../src/fpga/rtl/zynet.v" \
+"../../../../../src/fpga/tb/top_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
